@@ -11,11 +11,11 @@ source ${SCRIPT_DIR}/../../../devel/setup.bash
 # dataset locations
 bagnames=(
   "V1_01_easy"
-  "V1_02_medium"
-  "V1_03_difficult"
-  "V2_01_easy"
-  "V2_02_medium"
-  "V2_03_difficult"
+  # "V1_02_medium"
+  # "V1_03_difficult"
+  # "V2_01_easy"
+  # "V2_02_medium"
+  # "V2_03_difficult"
 )
 
 # how far we should start into the dataset
@@ -52,8 +52,10 @@ max_slam=(
 )
 
 # location to save log files into
-bag_path="/home/patrick/datasets/"
-base_path="/home/patrick/workspace/catkin_ws_plane/src/ov_plane/results/"
+# bag_path="/home/patrick/datasets/"
+bag_path="/home/paco/work_datas/open_datas/euroc/"
+# base_path="/home/patrick/workspace/catkin_ws_plane/src/ov_plane/results/"
+base_path="/home/paco/work_prjs/my_hjzl_works/open_codes/ov_plane_ws/src/ov_plane/results/"
 save_path1="$base_path/exp_euroc_mav/algorithms"
 save_path2="$base_path/exp_euroc_mav/timings"
 save_path3="$base_path/exp_euroc_mav/trackings"
@@ -112,7 +114,7 @@ roslaunch ov_plane serial.launch \
   config:="euroc_mav" \
   object:="" \
   dataset:="${bagnames[i]}" \
-  bag:="$bag_path/euroc_mav/${bagnames[i]}.bag" \
+  bag:="$bag_path/${bagnames[i]}.bag" \
   bag_start:="${bagstarttimes[i]}" \
   use_plane_constraint:="${do_msckf_plane[a]}" \
   use_plane_constraint_msckf:="${do_msckf_plane[a]}" \

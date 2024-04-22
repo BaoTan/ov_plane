@@ -66,6 +66,13 @@ To run on either real-world dataset, use one of the following commands:
 ```bash
 roslaunch ov_plane serial.launch config:=euroc_mav dataset:=V1_01_easy bag:=<path_to_bag>
 roslaunch ov_plane serial.launch config:=rpng_plane dataset:=table_01  bag:=<path_to_bag>
+
+#example
+roslaunch ov_plane serial.launch config:=euroc_mav dataset:=V1_01_easy bag:=/home/paco/work_datas/open_datas/euroc/V1_01_easy.bag
+roslaunch ov_plane serial.launch config:=rpng_plane dataset:=table_01  bag:=/home/paco/work_datas/open_datas/ov_plane/table_01.bag
+
+#可视化
+#打开roscore，然后rviz -d display.rviz 然后运行上述程序就可以看见检查结果
 ```
 
 Users can reproduce the results presented in our publication with the scripts provided in the [results/](results/) folder.
