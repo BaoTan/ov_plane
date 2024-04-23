@@ -12,9 +12,9 @@
     <arg name="bag_start"   default="0" />
     <!-- V1_01_easy, V1_02_medium, V1_03_difficult, V2_01_easy, V2_02_medium, V2_03_difficult -->
     <!-- table_01, table_02, table_03 -->
-    <arg name="dataset"     default="table_02" />
-    <arg name="bag"         default="/home/patrick/datasets/$(arg config)/$(arg dataset).bag" />
-    <!-- <arg name="bag"         default="/media/patrick/RPNG_DATA_6/$(arg config)/$(arg dataset).bag" /> -->
+    <arg name="dataset"     default="table_01" />
+    <!-- <arg name="bag"         default="/home/patrick/datasets/$(arg config)/$(arg dataset).bag" /> -->
+    <arg name="bag"         default="/home/paco/work_datas/open_datas/ov_plane/table_01.bag" />
 
     <!-- saving trajectory path and timing information -->
     <arg name="dosave"      default="true" />
