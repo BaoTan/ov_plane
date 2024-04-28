@@ -426,8 +426,11 @@ void ROS1Visualizer::callback_inertial(const sensor_msgs::Imu::ConstPtr &msg) {
   // If the processing queue is currently active / running just return so we can keep getting measurements
   // Otherwise create a second thread to do our update in an async manor
   // The visualization of the state, images, and features will be synchronous with the update!
-  if (thread_update_running)
+  if (thread_update_running){
+    PRINT_INFO("thread_update_running = true \n")
     return;
+  }
+    
   thread_update_running = true;
   std::thread thread([&] {
     // Lock on the queue (prevents new images from appending)

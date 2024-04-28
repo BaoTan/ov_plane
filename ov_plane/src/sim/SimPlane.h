@@ -68,7 +68,7 @@ public:
    * This will return true if it is a hit, and false otherwise.
    * Given a plane in the form Ax+By+Cz+D=0 we can first solve for the intersection.
    * R(t) = R0 + Rd*t
-   * A(x0 + xd*t) + B(y0 + yd*t) + (z0 + zd*t) + D = 0
+   * A(x0 + xd*t) + B(y0 + yd*t) + C(z0 + zd*t) + D = 0
    * We can inverse the above function to get the distance along this ray bearing
    * t = -(A*x0 + B*y0 + C*z0 + D) / (A*xd + B*yd + C*zd)
    *
